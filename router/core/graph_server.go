@@ -235,7 +235,7 @@ func newGraphServer(ctx context.Context, r *Router, routerConfig *nodev1.RouterC
 	if isConnStoreEnabled {
 		connStore, err := rmetric.NewConnectionMetricStore(
 			s.logger,
-			nil,
+			mappedMetricAttributes,
 			s.otlpMeterProvider,
 			s.promMeterProvider,
 			s.metricConfig,
